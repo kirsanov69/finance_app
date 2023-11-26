@@ -1,0 +1,9 @@
+.expenses-tag {
+    color: red;
+    font-weight: bold;
+  }
+
+  .income-tag {
+    color: green;
+    font-weight: bold;
+  }

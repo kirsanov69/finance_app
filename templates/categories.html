@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="col-6 mx-auto">
+    <h1>Список категорий</h1>
+    <ul class="list-group">
+        {% for category in categories %}
+          <li class="list-group-item d-flex justify-content-between">
+            {{ category.name }}
+            <button class="btn btn-sm btn-outline-danger" onclick="deleteCategory({{ category.id }})">Удалить категорию</button>
+          </li>
+        {% endfor %}
+    </ul>
+    <div class="mt-3">
+        <a href="{{ url_for('add_category') }}" class="btn btn-sm btn-outline-secondary">Добавить категорию</a>
+    </div>
+  </div>
+
+  <script>
+    function deleteCategory(categoryId) {
+        // Использование fetch для отправки запроса на удаление категории
+        fetch(`/delete_category/${categoryId}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            // Тело запроса, если необходимо
+            // body: JSON.stringify({})
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Обработка ответа после удаления категории
+            console.log(data.message);
+            // Дополнительные действия, если необходимо
+            // Например, перезагрузка страницы:
+            location.reload();
+        })
+        .catch(error => console.error('Ошибка:', error));
+    }
+</script>
+{% endblock %}

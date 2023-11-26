@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Все записи в категории "{{ category.name }}"</h2>
+  <a href="{{ url_for('add_category') }}" class="btn btn-primary">Добавить категорию</a>
+  </div>
+  <!-- Добавлен блок для отображения суммы бюджета -->
+  <h2>Сумма бюджета для категории {{category.name}}: {{ total_budget_category }}</h2>
+  <div class="col-6 mx-auto">
+
+  {% for post in posts %}
+    <div class="card my-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+         <div class="d-flex">
+          <a href="{{ url_for('edit_post', post_id=post.id) }}" class="btn btn-sm btn-outline-secondary me-2">Изменить</a>
+          <a href="{{ url_for('delete_post', post_id=post.id) }}" class="btn btn-sm btn-outline-danger">Удалить</a>
+          </div>
+        <p class="card-text">{{ post.content }}... <a href="{{ url_for('post', post_id=post.id) }}" class="text-decoration-none">Читать</a></p>
+        <p class="card-text"><small class="text-muted">Написано {{ post.date.strftime('%d.%m.%y') }}</small></p>
+        <p class="card-text">
+          Категория: <a href="{{ url_for('category', category_id=post.category.id) }}">{{ post.category.name }}</a>
+          | Теги: {% for tag in post.tags %}
+                  <a href="{{ url_for('tag', tag_id=tag.id) }}">{{ tag.name }}</a>
+                 {% endfor %}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}
