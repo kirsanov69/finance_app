@@ -15,10 +15,12 @@ application for control your finances
 Можно удалять и добавлять категории расходов и доходов,
 фильтровать доходы, расходы, выводить круговые диаграммы для наглядности,
 добавлять, удалять и редактировать записи.
-![Скриншот 1](pictures\Скрин 1.png)
-![Скриншот 1](pictures\Скрин 2.png)
-![Скриншот 1](pictures\Скрин 3.png)
-![Скриншот 1](pictures\Скрин 4.png)
-![Скриншот 1](pictures\Скрин 5.png)
-![Скриншот 1](pictures\Скрин 6.png)
-![Скриншот 1](pictures\Скрин 7.png)
+<p align="center">
+  <img src="https://github.com/kirsanov69/finance_app/blob/main/pictures/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%201.png">
+  <img src="https://github.com/kirsanov69/finance_app/blob/main/pictures/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%201.png">
+  <img src="https://github.com/kirsanov69/finance_app/blob/main/pictures/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%201.png">
+  <img src="https://github.com/kirsanov69/finance_app/blob/main/pictures/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%201.png">
+  <img src="https://github.com/kirsanov69/finance_app/blob/main/pictures/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%201.png">
+  <img src="https://github.com/kirsanov69/finance_app/blob/main/pictures/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%201.png">
+  <img src="https://github.com/kirsanov69/finance_app/blob/main/pictures/%D0%A1%D0%BA%D1%80%D0%B8%D0%BD%201.png">
+
